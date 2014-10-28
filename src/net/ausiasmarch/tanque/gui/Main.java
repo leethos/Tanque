@@ -21,9 +21,11 @@ public class Main extends javax.swing.JFrame {
     /** Creates new form Main */
     public Main() {
         initComponents();
+        String mensaje;
         estado = tanque.getEstado();
         controlRiego = new ControlRiego(estado);
         
+        mensaje = controlRiego.getMensaje();
         setSize(580, 445);
         setLocationRelativeTo(null);
 
