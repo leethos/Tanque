@@ -134,6 +134,7 @@ public class Main extends javax.swing.JFrame {
         controlRiego.setSequia(sequiaTipo);
 
         if (controlRiego.permitidoLlenar() != 0) {
+            controlRiego.tipoMensaje(controlRiego.permitidoLlenar());
             mensaje = controlRiego.getMensaje();
             mensaje(mensaje);
             return;
@@ -155,6 +156,7 @@ public class Main extends javax.swing.JFrame {
         humedadTipo = Convert.parseInt(jTextFieldNivelHumedadSuelo.getText());
         controlRiego.setHumedad(humedadTipo);
         if (controlRiego.permitidoVaciar() != 0) {
+            controlRiego.tipoMensaje(controlRiego.permitidoVaciar());
             mensaje = controlRiego.getMensaje();
             mensaje(mensaje);
             return;
